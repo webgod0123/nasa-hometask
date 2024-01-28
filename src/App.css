@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Container for centering the content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #005288;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+main {
+  padding: 20px 0;
+}
+
+/* Search input styles */
+.search-input,
+.year-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+/* Search button styles */
+.search-button {
+  padding: 10px 20px;
+  background-color: #005288;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.search-button:hover {
+  background-color: #003354;
+}
+
+/* Search form styles */
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+/* Results list styles */
+.results-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.result-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.result-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.result-item div {
+  padding: 15px;
+}
+
+.result-item h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #0047ab; /* NASA Blue */
+}
+
+.result-item p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #666;
+}
+
+.result-item p:first-of-type {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Show page styles */
+.show-page {
+  padding: 20px;
+}
+
+.show-page img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Back button styles */
+.back-button {
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background-color: #e0e0e0;
+}
+
+
+.show-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.show-container h1 {
+  font-size: 2.5rem;
+  color: #0047ab; /* NASA Blue */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.show-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;
+  border-radius: 5px;
+}
+
+.show-container .metadata {
+  font-size: 1rem;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.show-container .metadata p {
+  margin-bottom: 10px;
+}
+
+.show-container .metadata-label {
+  display: inline-block;
+  min-width: 120px;
+  font-weight: bold;
+  color: #333;
+}
+
+.show-container .metadata-content {
+  display: inline;
+  color: #666;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .result-item {
+    width: calc(50% - 20px); /* Two items per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .result-item {
+    width: 100%; /* Full width on mobile */
+  }
+  .search-form {
+    flex-direction: column;
+  }
+  .search-button {
+    width: auto;
+  }
+}
